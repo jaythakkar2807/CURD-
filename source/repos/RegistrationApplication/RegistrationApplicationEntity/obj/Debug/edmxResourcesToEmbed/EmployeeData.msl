@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SampleModelStoreContainer" CdmEntityContainer="EmployeeContextString">
+    <EntitySetMapping Name="registration">
+      <EntityTypeMapping TypeName="SampleModel.registration">
+        <MappingFragment StoreEntitySet="registration">
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_location" ColumnName="emp_location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddEmployee" FunctionName="SampleModel.Store.AddEmployee" />
+    <FunctionImportMapping FunctionImportName="spAllEmployee" FunctionName="SampleModel.Store.spAllEmployee">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SampleModel.spAllEmployee_Result">
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_location" ColumnName="emp_location" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spDeleteEmployee" FunctionName="SampleModel.Store.spDeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="spEditEmployee" FunctionName="SampleModel.Store.spEditEmployee" />
+  </EntityContainerMapping>
+</Mapping>

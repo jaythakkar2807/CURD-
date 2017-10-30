@@ -1,0 +1,11 @@
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\bin\Debug\RegistrationApplicationRepos.dll
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\bin\Debug\RegistrationApplicationRepos.pdb
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\obj\Debug\RegistrationApplicationRepos.csprojResolveAssemblyReference.cache
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\obj\Debug\RegistrationApplicationRepos.csproj.CoreCompileInputs.cache
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\obj\Debug\RegistrationApplicationRepos.dll
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\obj\Debug\RegistrationApplicationRepos.pdb
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\bin\Debug\EntityFramework.dll
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\bin\Debug\RegistrationApplicationEntity.dll
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\bin\Debug\RegistrationApplicationEntity.pdb
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\bin\Debug\RegistrationApplicationEntity.dll.config
+c:\users\employee\source\repos\RegistrationApplication\RegistrationApplicationRepos\bin\Debug\EntityFramework.xml

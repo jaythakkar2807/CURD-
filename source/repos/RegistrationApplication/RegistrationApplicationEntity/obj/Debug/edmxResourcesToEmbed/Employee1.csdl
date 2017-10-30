@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="registration">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emp_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="emp_location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="EmployeeConnection1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="registration" EntityType="Self.registration" />
+    <EntitySet Name="Table_1" EntityType="Self.Table_1" />
+    <FunctionImport Name="AddEmployee">
+      <Parameter Name="EmpName" Mode="In" Type="String" />
+      <Parameter Name="EmpLocation" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getEmpDetailById" ReturnType="Collection(SampleModel.getEmpDetailById_Result)">
+      <Parameter Name="Emp_Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spAllEmployee" ReturnType="Collection(SampleModel.spAllEmployee_Result)" />
+    <FunctionImport Name="spDeleteEmployee">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spEditEmployee">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="EmpName" Mode="In" Type="String" />
+      <Parameter Name="EmpLocation" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="getEmpDetailById_Result">
+    <Property Type="Int32" Name="emp_id" Nullable="false" />
+    <Property Type="String" Name="emp_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="emp_location" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spAllEmployee_Result">
+    <Property Type="Int32" Name="emp_id" Nullable="false" />
+    <Property Type="String" Name="emp_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="emp_location" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

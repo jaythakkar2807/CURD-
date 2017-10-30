@@ -1,0 +1,50 @@
+﻿@model RegistrationApplication.Models.ClassViewModel
+
+@{
+    ViewBag.Title = "ViewRecords";
+}
+
+@using (Html.BeginForm())
+{
+<h3>Employee Info</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+            @foreach (var list in Model.listUser)
+            {
+                if (Model.listUser != null)
+                {
+                    <tr>
+                        <td>@list.emp_name</td>
+                        <td>@list.emp_location</td>
+                        <td>
+                            <a href="/" class="btn btn-success">Add</a>
+                            <a href="/Home/EditDetail/@list.emp_id" class="btn btn-primary">Edit</a>
+                            <a href="/Home/DeleteRecord/@list.emp_id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td>No records Found</td>
+                    </tr>
+                }
+            }
+        
+        
+        
+    </tbody>
+</table>
+if (TempData["Success"] != null)
+{
+    <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+}
+}
